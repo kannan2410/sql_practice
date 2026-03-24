@@ -8,7 +8,7 @@ FROM orders o
 JOIN customers c ON o.customer_id = c.customer_id
 JOIN order_statuses os on o.status = os.order_status_id
 
-//exercise 
+-- exercise 
 USE sql_invoicing;
 SELECT
     p.invoice_id,
