@@ -48,9 +48,8 @@
 
 
 -- Write your MySQL query statement below
-SELECT
-o.customer_number
-FROM Orders o
-WHERE o.order_number = (
-    SELECT MAX(order_number) FROM Orders
-)
+SELECT customer_number
+FROM Orders 
+GROUP BY customer_number
+ORDER BY COUNT(customer_number) DESC
+LIMIT 1;
